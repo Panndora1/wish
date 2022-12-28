@@ -40,6 +40,7 @@ input[type="text"] {
     height: auto;
     padding: 15px;
     border-radius: 20px;
+    box-shadow: inset -4px -4px 10px rgba(124, 32, 81, 0.603);
 }
 .name {
     display: flex;
@@ -54,12 +55,18 @@ input[type="text"] {
     position: absolute;
     top: -80px;
     right: 0%;
-    rotate: 15deg;
 }
 
 .name_img {
     width: 100%;
     max-width: 90px;
+    rotate: 15deg;
+    transition: .5s;
+}
+
+.name_img:hover {
+    rotate: -25deg;
+    transition: .5s;
 }
 
 .name_wrapper {
@@ -109,9 +116,15 @@ input[type="text"] {
     background-color: #9a116a;
     border: none;
     border-radius: 10px;
-    color: #fecfef;
+    color: #fff;
     cursor: pointer;
-    font-size: 2vh;
+    font-size: 1em;
+    box-shadow: 0 5px 0 #690b48;
+    transition: .3s;
+}
+
+.form_btn:hover {
+    background-color: #ad1a7a;
 }
 
 .wish {
@@ -126,12 +139,33 @@ input[type="text"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    position: relative;
+    width: 60%;
     max-width: 1000px;
     padding: 15px;
     background-color: rgb(220 93 161);
     border-radius: 20px;
+    box-shadow: inset -4px -4px 10px rgba(124, 32, 81, 0.603);
 }
+
+.wish_image {
+    position: absolute;
+    top: -60px;
+    left: 0%;
+}
+
+.wish_img {
+    width: 100%;
+    max-width: 90px;
+    rotate: -15deg;
+    transition: .5s;
+}
+
+.wish_img:hover {
+    rotate: 25deg;
+    transition: .5s;
+}
+
 .close {
     display: flex;
     justify-content: flex-end;
@@ -158,9 +192,17 @@ input[type="text"] {
     background-color: #9a116a;
     border: none;
     border-radius: 10px;
-    color: #fecfef;
+    color: #fff;
     cursor: pointer;
     padding: 10px;
+    font-size: 1em;
+    box-shadow: 0 5px 0 #690b48;
+    transition: .3s;
+    margin-bottom: 15px;
+}
+
+.wish_btn:hover {
+    background-color: #ad1a7a;
 }
 
 .footer {
@@ -168,8 +210,26 @@ input[type="text"] {
 
 .active {
     display: flex;
+    transition: .5s;
 }
 
 .none {
     display: none;
+    transition: .5s;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        width: 80%;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .form_btn {
+        font-size: 0.6em;
+    }
 }
