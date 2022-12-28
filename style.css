@@ -102,6 +102,10 @@ input[type="text"] {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.form_input::placeholder {
+    color: #360f2a;
+}
+
 .form_input:focus {
     color: #212529;
     background-color: #fff;
